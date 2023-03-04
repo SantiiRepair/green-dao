@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
-import meta from '../../media/metamask'
+import meta from '../../media/metamask.png'
 
 const Nav = styled.nav` 
   background: #282c34; 
