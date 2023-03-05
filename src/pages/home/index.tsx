@@ -19,6 +19,7 @@ const Tow = styled.div`
  display: flex;
  flex-direction: row;
  justify-content: center;
+ position: fixed;
 `
 
 function Home({ handleOpenModal }: Props) {

@@ -10,7 +10,7 @@ const translate = keyframes`
 `
 
 const Globe = styled.img`
-  animation: ${translate} 8s alternate infinite;
+  animation: ${translate} 5s alternate infinite;
   height: 70%;
   width: 32%;
 `
