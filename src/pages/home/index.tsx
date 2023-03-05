@@ -68,7 +68,7 @@ function Home({ handleOpenModal }: Props) {
         height='2.5rem'
         minWidth='12.5rem'
       >
-      Donate Now
+      <Typography as='a' href>Donate Now</Typography>
       </Button>
   ) : (
       <Button
