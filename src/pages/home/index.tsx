@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react'
 import styled from 'styled-components'
-import { Button, Flex, Text as Typography } from "@chakra-ui/react";
+import { Link, Button, Flex, Text as Typography } from "@chakra-ui/react";
 import SimpleGlobe from '../../components/globe'
 import { useEthers } from "@usedapp/core";
 
@@ -49,8 +49,8 @@ function Home({ handleOpenModal }: Props) {
        <Typography 
      fontSize='30'
      >If us dont do it, no body do it.</Typography>
-    {account ? (
-      <Button
+    { account ? (
+     <Button
         bg="#2a4365"
         mt='40'
         border="1px solid transparent"
@@ -67,8 +67,9 @@ function Home({ handleOpenModal }: Props) {
         fontWeight="500"
         height='2.5rem'
         minWidth='12.5rem'
+        href='/donate'
       >
-      <Typography as='a' href>Donate Now</Typography>
+      <Link href='/donate'>Donate Now</Link>
       </Button>
   ) : (
       <Button
