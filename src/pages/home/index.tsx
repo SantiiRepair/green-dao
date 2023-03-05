@@ -32,6 +32,9 @@ function Home({ handleOpenModal }: Props) {
   display='flex'
   alignItems='center'
   bgColor='#282c34'
+  bgImage='https://i.ibb.co/m4cyLkX/starry-sky-2675322-960-720.jpg'
+  bgSize='200vh'
+  bgRepeat='no-repeat'
   minH='100vh'
   >
    <Tow>
@@ -47,27 +50,24 @@ function Home({ handleOpenModal }: Props) {
      >If us dont do it, no body do it.</Typography>
     {account ? (
       <Button
-        onClick={handleOpenModal}
-        bg="gray.800"
+        bg="#2a4365"
+        mt='40'
         border="1px solid transparent"
         _hover={{
           border: "1px",
           borderStyle: "solid",
-          borderColor: "blue.400",
-          backgroundColor: "gray.700",
+          borderColor: "#2a4365",
+          backgroundColor: "#2a4365",
         }}
-        borderRadius="xl"
-        m="1px"
+        borderRadius="0.75rem"
         px={3}
-        height="38px"
+        color="#63b3ed"
+        fontSize="1.125rem"
+        fontWeight="500"
+        height='2.5rem'
+        minWidth='12.5rem'
       >
-        <Typography color="white" fontSize="md" fontWeight="medium" mr="2">
-          {account &&
-            `${account.slice(0, 6)}...${account.slice(
-              account.length - 4,
-              account.length
-            )}`}
-        </Typography>
+      Donate Now
       </Button>
   ) : (
       <Button
