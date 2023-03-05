@@ -1,16 +1,16 @@
 import React from 'react'
 import styled,{ keyframes } from 'styled-components'
 
-const rotate = keyframes`
+const translate = keyframes`
   from {
-    transform: rotate(10deg);
+    transform: translateY(10px);
   } to {
-    transform: rotate(-10deg);
+    transform: translateY(-10px);
   } 
 `
 
 const Globe = styled.img`
-  animation: ${rotate} 8s alternate infinite;
+  animation: ${translate} 8s alternate infinite;
   height: 70%;
   width: 32%;
 `
