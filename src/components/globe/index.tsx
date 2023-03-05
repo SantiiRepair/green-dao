@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Globe = styled.img` 
-  height: 75%;
-  width: 38%;
+  height: 70%;
+  width: 32%;
 `
 
 function SimpleGlobe() {

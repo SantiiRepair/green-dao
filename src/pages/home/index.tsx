@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { Flex, Text as Typography } from "@chakra-ui/react";
 import SimpleGlobe from '../../components/globe'
 
-const Text = styled.div` 
+const Text = styled.div`
+ margin-top: 35px; 
  flex-direction: column;
  color: #fff;
 `
@@ -26,9 +27,15 @@ function Home() {
   >
    <Tow>
     <Text>
-     <Typography>Lets save our world, contribute now.</Typography>
-     <Typography>Time run and it dont stop.</Typography>
-     <Typography>If us dont do it, no body do it.</Typography>
+     <Typography 
+     fontSize='30'
+     >Lets save our world, contribute now.</Typography>
+      <Typography 
+     fontSize='30'
+     >Time run and it dont stop.</Typography>
+       <Typography 
+     fontSize='30'
+     >If us dont do it, no body do it.</Typography>
     </Text>
     <SimpleGlobe />
    </Tow>
