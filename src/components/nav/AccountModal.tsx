@@ -118,7 +118,7 @@ import {
                   fontSize="sm"
                   display="flex"
                   alignItems="center"
-                  href={`https://ropsten.etherscan.io/address/${account}`}
+                  href={`https://bscscan.com/address/${account}`}
                   isExternal
                   color="gray.400"
                   ml={6}
