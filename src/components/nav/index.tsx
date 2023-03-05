@@ -1,7 +1,11 @@
-import React from 'react'
+import React,{ useState } from 'react'
+import { ChakraProvider, useDisclosure } from "@chakra-ui/react";
 import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
-import meta from '../../media/metamask.png'
+import Layout from "./Layout";
+import ConnectButton from "./ConnectButton";
+import AccountModal from "./AccountModal";
+import theme from './theme'
 
 const Nav = styled.nav` 
   background: #282c34; 
@@ -16,7 +20,7 @@ const Nav = styled.nav`
 
   
 const NavData = styled.a` 
-  color: #808080; 
+  color: #808080;-
   display: flex; 
   align-items: center; 
   text-decoration: none; 
@@ -57,78 +61,42 @@ const NavMenu = styled.div`
     display: none; 
   } 
 `
-
   
-const NavBtn = styled.nav` 
-  display: flex; 
-  align-items: center; 
-  margin-right: 24px; 
-  /* Third Nav */
-  /* justify-content: flex-end; 
-  width: 100vw; */
-  @media screen and (max-width: 768px) { 
-    display: none; 
-  } 
-`
-
-  
-const NavBtnConnect = styled.button` 
-  border-radius: 8px; 
+const NavBtn = styled.button` 
+  width: 12%;
+  font-family: 'Righteous', sans-serif;
+  border-radius: 10px; 
   background: #2adc2d; 
-  padding: 10px 22px; 
   color: #000000; 
   outline: none; 
   border: none; 
   cursor: pointer; 
-  transition: all 0.2s ease-in-out; 
-  text-decoration: none; 
-  /* Second Nav */
-  margin-left: 24px; 
-  &:hover { 
-    transition: all 0.2s ease-in-out; 
-    background: #fff; 
-    color: #808080; 
-  } 
+  margin-right: 5px;  
 `
 
   
 function Navbar() { 
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return ( 
 
     <> 
-
-      <Nav> 
-
+      {/* <Nav> 
         <Bars /> 
-
         <NavMenu> 
-
-          <NavData href='/about'>About</NavData> 
-
-          <NavData href='/events'>Events</NavData> 
-
+          <NavData href='/home'>Home</NavData> 
+          <NavData href='/events'></NavData> 
           <NavData href='/annual'>Annual Report</NavData> 
-
-          <NavData href='/team'>Teams</NavData> 
-
-          <NavData href='/blogs'>Blogs</NavData> 
-
-          <NavData href='/sign-up'>Sign Up</NavData> 
-
         </NavMenu> 
-
-        <NavBtn> 
-
-         <NavBtnConnect>
-          <img src={meta} alt='meta'/>
-          <span/>
-           Connect Wallet
-         </NavBtnConnect> 
-        </NavBtn> 
-
-      </Nav> 
-
+         <NavBtn>
+           8
+         </NavBtn>
+  </Nav> */}
+      <ChakraProvider theme={theme}>
+       <Layout>
+        <ConnectButton handleOpenModal={onOpen} />
+        <AccountModal isOpen={isOpen} onClose={onClose} />-   
+       </Layout>
+     </ChakraProvider>
     </> 
 
   )

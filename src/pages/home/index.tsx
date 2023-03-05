@@ -1,43 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Flex, Text as Typography } from "@chakra-ui/react";
 import SimpleGlobe from '../../components/globe'
 
-const Hero = styled.div` 
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  font-size: calc(10px + 2vmin);
-`
-
 const Text = styled.div` 
- display: flex;
  flex-direction: column;
-`
-
-const Typography = styled.h1` 
-  font-size: calc(10px + 2vmin);
-  color: #fff;
+ color: #fff;
 `
 
 const Tow = styled.div` 
  display: flex;
  flex-direction: row;
+ justify-content: center;
 `
 
 function Home() {
 
  return (
-  <Hero>
+  <Flex
+  flexDirection='row'
+  display='flex'
+  alignItems='center'
+  bgColor='#282c34'
+  minH='100vh'
+  >
    <Tow>
     <Text>
      <Typography>Lets save our world, contribute now.</Typography>
-     <Typography>Time run and dont stop.</Typography>
+     <Typography>Time run and it dont stop.</Typography>
      <Typography>If us dont do it, no body do it.</Typography>
     </Text>
     <SimpleGlobe />
    </Tow>
-  </Hero>
+  </Flex>
  )
 }
 
