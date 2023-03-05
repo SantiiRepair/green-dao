@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Button, Flex, Text as Typography } from "@chakra-ui/react";
+import { Button, Flex, Text as Typography } from "@chakra-ui/react";
 import SimpleGlobe from '../../components/globe'
 import { useEthers } from "@usedapp/core";
 
@@ -95,6 +95,7 @@ function Home({ handleOpenModal }: Props) {
     </Button>
   )}
     </Text>
+  
     <SimpleGlobe />
    </Tow>
   </Flex>
